@@ -1,4 +1,4 @@
-# 😎 Multithreaded Chat Application (Assignment 2)
+# Multithreaded Chat Application (Assignment 2)
 
 Authors: Jingting, Fengye
 
@@ -9,7 +9,7 @@ Date: December 2025
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 - [Overview](#-overview)
 - [Features](#-features)
 - [Project Architecture](#-project-architecture)
@@ -19,7 +19,7 @@ Date: December 2025
 
 ---
 
-## 📖 Overview
+## Overview
 This project implements a distributed chat system consisting of a **Server** and multiple **Clients**.
 
 * The **Server** manages a linked list of active users, broadcasts messages, and handles synchronization using Read-Write locks.
@@ -27,7 +27,7 @@ This project implements a distributed chat system consisting of a **Server** and
 
 Communication is handled via **UDP** (User Datagram Protocol).
 
-## ✨ Features
+## Features
 
 ### Core Functionality
 * **Multithreading:** Both client and server use `pthread` to handle I/O and logic concurrently.
@@ -35,7 +35,7 @@ Communication is handled via **UDP** (User Datagram Protocol).
 * **Synchronization:** Uses `pthread_rwlock` (Reader-Writer Lock) to ensure thread safety when accessing the user list.
 * **Private Messaging:** Support for direct messaging to specific users (`sayto`).
 
-### 🏆 Proposed Extensions (Implemented)
+### Proposed Extensions (Implemented)
 
 #### ✅ PE 1: Chat History
 * **Mechanism:** Implemented a **Circular Buffer** on the server side.
@@ -62,7 +62,7 @@ Communication is handled via **UDP** (User Datagram Protocol).
 
 ---
 
-## 💻 How to Build & Run
+## How to Build & Run
 
 ### 1. Compilation
 Make sure you have `gcc` installed. Compile both the server and client using the `-pthread` flag.
@@ -90,7 +90,7 @@ Open multiple terminal windows to simulate different users.
 ./chat_client
 ```
 
-## 🎮 Command Guide
+## Command Guide
 
 All commands must follow the format `command$content` (using `$` as the delimiter).
 
@@ -102,7 +102,7 @@ All commands must follow the format `command$content` (using `$` as the delimite
 | **quit** | `quit` | **Exit** the client application locally. |
 
 
-### ⚠️ Testing Notes for PE 2 (Kick Feature)
+### Testing Notes for PE 2 (Kick Feature)
 To verify the "Kick" feature:
 1. Connect a client: `conn$TestUser`.
 2. Terminate the client process immediately (Ctrl+C).
