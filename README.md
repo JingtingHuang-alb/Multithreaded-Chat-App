@@ -50,7 +50,7 @@ Communication is handled via **UDP** (User Datagram Protocol).
     3.  **Kick:** If the user fails to respond (inactive for another 10s), they are removed from the list and notified.
 * **Client-Side:** Clients automatically reply with `ret-ping$` upon receiving a ping, keeping the connection alive while the user is idle.
 
-## 🛠 Project Architecture
+## Project Architecture
 
 | Component | Responsibility | Key Tech |
 | :--- | :--- | :--- |
